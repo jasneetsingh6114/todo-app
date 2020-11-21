@@ -6,6 +6,7 @@ function App() {
   const[input,setInput] = useState('');
   const addTodo =(event) =>{
 // this will fire off  when we click the button
+event.preventDefault
 setTodos([...todos , input]);
   }
   
@@ -15,11 +16,9 @@ setTodos([...todos , input]);
       <h1>Hello World!</h1>
       <form>
       <input value ={input} onChange={event => setInput(event.target.value)} />
-      <button type ='submit' onClick={addTodo}>What you wanted to do!!</button>
-
-      </form>
-      <input value ={input} onChange={event => setInput(event.target.value)} />
-      <button onClick={addTodo}>What you wanted to do!!</button>
+      <button type ="submit" onClick={addTodo}>What you wanted to do!!</button>
+    </form>
+      
       <ol>
         {todos.map(todos => (
           <li>{todos}</li>  
