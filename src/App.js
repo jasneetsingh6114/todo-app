@@ -10,7 +10,6 @@ event.preventDefault
 setTodos([...todos , input]);
   }
   
-
   return (
     <div className="App">
       <h1>Hello World!</h1>
